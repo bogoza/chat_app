@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".fragment.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_et"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColorHint="@color/text_gray"
+            android:textColor="@color/text_gray"
+            android:hint="Search"
+            android:background="@drawable/rounded_et"
+            android:drawableStart="@drawable/ic_search_icon"
+            app:layout_constraintEnd_toStartOf="@id/filter_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="50dp"
+            android:paddingStart="20dp"
+            android:drawablePadding="10dp"
+            />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/filter_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_et"
+        app:layout_constraintBottom_toBottomOf="@id/search_et"
+        android:src="@drawable/ic_filter"
+        android:scaleType="centerInside"
+        android:background="@drawable/rounded_corners"
+        android:layout_marginEnd="20dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_et"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,3 +18,9 @@ data class User(
     @Json(name="laste_message_type")
     val lastMessageType:String
 )
+
+enum class MessageType{
+    TEXT,
+    FILE,
+    VOICE
+}
