@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -18,7 +19,9 @@
         android:id="@+id/name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:text="Alice Smith"
+        android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@id/circle_iv"
         app:layout_constraintTop_toTopOf="@id/circle_iv"
         app:layout_constraintBottom_toBottomOf="@id/circle_iv"
@@ -27,10 +30,49 @@
         android:textStyle="bold"
         />
     <TextView
+        android:id="@+id/message_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Great.I will have a look"
+        android:text="Great. I will have a look"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="@id/name_tv"
         app:layout_constraintTop_toBottomOf="@id/name_tv"
+        app:layout_constraintBottom_toTopOf="@id/line_v"
+        />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name_tv"
+        android:layout_marginEnd="30dp"
+        android:textSize="18sp"
+        android:text="4:20 PM"
+        />
+
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="3"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/message_tv"
+        app:layout_constraintEnd_toEndOf="@id/time_tv"
+        app:layout_constraintBottom_toBottomOf="@id/message_tv"
+        android:background="@drawable/circle"
+        />
+
+    <View
+        android:id="@+id/line_v"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/text_gray"
+        app:layout_constraintTop_toBottomOf="@id/circle_iv"
+        app:layout_constraintStart_toStartOf="@id/name_tv"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
