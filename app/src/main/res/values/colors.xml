@@ -8,4 +8,6 @@
     <color name="btn_green">#3EDD9C</color>
     <color name="et_color">#1A2830</color>
     <color name="text_gray">#90A0A8</color>
+    <color name="circle_yellow">#FFC542</color>
+    <color name="circle_red">#FF565E</color>
 </resources>

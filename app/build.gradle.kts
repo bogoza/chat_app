@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp").version("1.6.10-1.0.4")
+    id ("kotlin-kapt")
 }
 
 android {
@@ -54,6 +55,14 @@ dependencies {
 
     implementation ("com.github.bumptech.glide:glide:4.16.0")//glide
 
-    implementation("com.squareup.moshi:moshi-kotlin:1.14.0")//moshi
+    //moshi
+    implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
+    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
+
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")//retrofit
+
+    //coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
 
 }

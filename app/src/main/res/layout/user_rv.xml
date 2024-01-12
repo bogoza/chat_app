@@ -31,15 +31,17 @@
         />
     <TextView
         android:id="@+id/message_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Great. I will have a look"
+        android:maxLines="1"
         android:textSize="14sp"
         android:textColor="@color/white"
         android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="@id/name_tv"
         app:layout_constraintTop_toBottomOf="@id/name_tv"
         app:layout_constraintBottom_toTopOf="@id/line_v"
+        app:layout_constraintEnd_toStartOf="@id/time_tv"
         />
 
     <TextView
@@ -55,6 +57,7 @@
         />
 
     <TextView
+        android:id="@+id/unread_tv"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:text="3"
